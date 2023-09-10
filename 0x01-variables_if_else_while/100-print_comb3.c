@@ -9,21 +9,28 @@ int main(void)
 {
 	int i, j;
 
-	for (i = 0; i <= 9; i++)
+	i = '0';
+	j = '0';
+
+	while (i <= '9')
 	{
-		for (j = 0; j <= 9; j++)
+		while (j <= '9')
 		{
-			if (!((i == j) || (j > i)))
+			if (i < j)
 			{
-				putchar('0' + j);
-				putchar('0' + i);
-				if (!(i == 9 && j == 8))
+				putchar(i);
+				putchar(j);
+				if (i != '8' || (i == '8' && j != '9'))
 				{
 					putchar(',');
 					putchar(' ');
+
 				}
 			}
+			j++;
 		}
+		i++;
+		j = '0';
 	}
 	putchar('\n');
 	return (0);
