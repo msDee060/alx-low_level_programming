@@ -1,11 +1,15 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * main - prints _putchar.
  *
  * Return: Always 0.
  */
+
+int _putchar(char c);
 int main(void)
 {
-	putchar('_putchar\n')
+	int _putchar();
+	putchar('\n);
+	return (0);
 }
