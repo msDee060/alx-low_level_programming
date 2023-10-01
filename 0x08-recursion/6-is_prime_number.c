@@ -1,5 +1,28 @@
-#include "main.h"
 #include <stdio.h>
+#include <stdbool.h>
+
+/**
+  * is_divisible - tocheck if number can be divided.
+  * @n: is the number.
+  * @divisor: is the divisor.
+  * Return: answer.
+  */
+bool is_divisible(int n, int divisor)
+{
+	if (divisor == 1)
+	{
+		return (false);
+	}
+	if (divisor * divisor > n)
+	{
+		return (false);
+	}
+	if (n % divisor == 0)
+	{
+		return (true);
+	}
+	return (is_divisible(n, divisor + 1));
+}
 
 /**
   * is_prime_number - returns 1 if the input integer is a prime number.
@@ -8,8 +31,6 @@
   */
 int is_prime_number(int n)
 {
-	int i;
-
 	if (n <= 1)
 	{
 		return (0);
@@ -18,16 +39,5 @@ int is_prime_number(int n)
 	{
 		return (1);
 	}
-	if (n % 2 == 0 || n % 3 == 0)
-	{
-		return (0);
-	}
-	for (i = 5; i * i <= n; i += 6)
-	{
-		if (n % i == 0 || n % (i + 2) == 0)
-		{
-			return (0);
-		}
-	}
-	return (1);
+	return (!is_divisible(n, 2));
 }
