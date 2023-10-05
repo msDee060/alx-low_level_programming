@@ -2,10 +2,10 @@
 
 This is when a function calls itself.
 
-#Files
+# Files
 
-| FILE | DESCRIPTION |
-| ____ | ___________ |
+| Filename | Description |
+| -------- | ----------- |
 | 0-puts_recursion.c | prints a string |
 | 1-print_rev_recursion.c | prints a string in reverse |
 | 2-strlen_recursion.c | returns the length of a string |
