@@ -10,7 +10,7 @@ long largest_prime_factor(long n)
 {
 	long largest = -1;
 	long i;
-	
+
 	while (n % 2 == 0)
 	{
 		largest = 2;
@@ -43,7 +43,7 @@ int main(void)
 	num = 612852475143;
 
 	largest_prime = largest_prime_factor(num);
-	printf("Largest prime factor of %ld is %ld\n", num, largest_prime);
+	printf("%ld\n", largest_prime);
 
 	return (0);
 }
